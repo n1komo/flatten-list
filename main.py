@@ -9,13 +9,13 @@ def flatten_list(nested_list):      # this func flattens the list
 
 
 def main():
-    sample_list = [1, 2, [3, 4, [5, 6, [7, 8], 9], 10], 11, 12, [13, 14], 15]   # sample test
+    sample_list = [1, 2, [3, 4, ["five", 6, [7, "eight"], 9], "ten"], 11, 12, ["thirteen", 14], 15]   # sample test
     flatten_list(sample_list)
     print(READY_LIST) # debug purposes
     
     
     
-    
+    D
 if __name__ == '__main__':
     main()
     
