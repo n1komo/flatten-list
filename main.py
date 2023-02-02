@@ -1,21 +1,22 @@
-READY_LIST = []
 
-def flatten_list(nested_list):      # this func flattens the list
-    for item in nested_list:
-        if isinstance(item, list):  # this checks if the item in list is type of a list.
-            flatten_list(item)
+def flatten_list(test_list):
+    if isinstance(test_list, list):
+        if test_list == []:
+            return []
         else:
-            READY_LIST.append(item)
+            first, rest = test_list[0], test_list[1:]
+            return flatten_list(first) + flatten_list(rest)
+    else:
+        return [test_list]
 
 
 def main():
     sample_list = [1, 2, [3, 4, ["five", 6, [7, "eight"], 9], "ten"], 11, 12, ["thirteen", 14], 15]   # sample test
-    flatten_list(sample_list)
-    print(READY_LIST) # debug purposes
+    flat_list = flatten_list(sample_list)
+    print(flat_list) # debug purposes
     
     
     
-    D
 if __name__ == '__main__':
     main()
     
